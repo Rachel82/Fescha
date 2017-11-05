@@ -1,3 +1,54 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body	{
+	background-color: #eaded5; 
+} 
+
+h1 {
+	font-family: arial;
+	text-align: center;
+	font-size: 1em;
+	color: grey;
+}
+
+
+p {
+	text-align: center;
+}
+
+.nav-navbar li a {
+	padding: 20px;
+	padding-top: 20px !important;
+	text-transform: uppercase;
+}
+
+.nav-navbar li {
+	display: inline-block;
+}
+
+.nav-navbar {
+	float: right;
+}
+
+ul > li a:hover {
+	background-color: #CCD4BF;
+}
+
+.copyright {
+	font-family: "UniversBoldCondensed",Helvetica,sans-serif;
+	font-size: 1em;
+}
+
+.social-media li {
+	display: inline-block;
+	position: center;
+	list-style: none;
+}
+
+.social-media ul {
+	text-align: center;
+}
+
+
