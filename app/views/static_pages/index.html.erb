@@ -1,47 +1,91 @@
-<h1 class="home">Welcome to Fescha</h1>
-<p class="home">Your source for Austria's best fashion designers</p>
+	<div class="hero-image">
+	<%= image_tag("forcee.jpg", class:"img-responsive") %> 
+	</div>	
 
-<div class="products">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-          <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag("Instagram.png", :size => "50x50") %> 
-      	<div class="carousel-caption">
-          <h3>Digital Media</h3>
-            <p>Web Design, Motion Graphics.</p>
-    		</div>
-    </div>   
-    <div class="item">
-      <%= image_tag("Instagram.png", :size => "50x50") %>
-       	<div class="carousel-caption">
-          <h3>Branding</h3>
-          <p>Logo, visuals.</p>
-        </div>
-          </div>
-            
-    <div class="item">
-      <%= image_tag("Instagram.png", :size => "50x50") %>
-        <div class="carousel-caption">
-          <h3>Print Media</h3>
-          <p>Brochures, Catalogues, Stationeries.</p>
-        </div>
-    </div> 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-            
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    </div>
+<!-- Start feature products -->
+
+  <div class="index-container.container.text-center">
+  	<h1 class="welcome">Your source for Austria's best fashion designers</h1>
   </div>
+  <div class="container-fluid">
+  	<div class="row">
+  		
+  		<div class="col-md-6 col-xs-6" id="feature-1">
+  			<a href="#">
+  				<%= image_tag("force4.jpg", class:"img-responsive" ) %>
+  					<div class="feature-content">
+  						<h2>Luxuriously soft, versatile and always organic.</h2>
+  					</div>
+  					<div class=" For-Him">
+  						<div class="product-card>">
+  							<p class="gender"><span class="title">For Her</span></p>
+  							<p class="meta-info">Dark Collection</p>
+  						</div>
+  				</div>
+  			</a>
+  		</div>
+  		<div class="col-md-6 col-xs-6" id="feature-1">
+  			<a href="#">
+  				<%= image_tag("force6.jpg", class:"img-responsive" ) %>
+  					<div class="feature-content">
+  						<h2>Luxuriously soft, versatile and always organic.</h2>
+  					</div>
+  					<div class=" For-Him">
+  						<div class="product-card>">
+  							<p class="gender"><span class="title">For Him</span></p>
+  							<p class="meta-info">Dark Collection</p>
+  						</div>
+  					</div>
+  			</a>
+  		</div>
+  	</div>
+  </div>
+
+  <!-- Start Online shop -->
+
+  <div class="shop-product">
+  	<div container="text-center">
+  		<h1>Get the Goods</h1>
+  	</div>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-4 col-xs-6" id="feature-1">
+  				<a href="#">
+  					<h5> Workday</h5>
+  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
+  						<div class="product-text">
+  							<h3>Blouse</h2>
+  						</div>
+  				</a>
+  			</div>
+
+  			<div class="col-md-4 col-xs-6" id="feature-2">
+  				<a href="#">
+  					<h5> Afterwork</h5>
+  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
+  						<div class="product-text">
+  							<h3>Dress</h2>
+  								<span>
+  									<button class="shop-button">
+  										<span class="shop">Shop</span>
+  									</button>
+  								</span>
+  						</div>
+  				</a>
+  			</div>
+  
+  			<div class="col-md-4 col-xs-6" id="feature-3">
+  				<a href="#">
+  					<h5>Weekend</h5>
+  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
+  						<div class="product-text">
+  							<h3>T-Shirt</h2>
+  						</div>
+  				</a>
+  			</div>
+  	</div>
+  </div>
+  	
+  			
+
+
