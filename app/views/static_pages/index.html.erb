@@ -3,38 +3,28 @@
 	</div>	
 
 <!-- Start feature products -->
-
+  
   <div class="index-container.container.text-center">
   	<h1 class="welcome">Your source for Austria's best fashion designers</h1>
   </div>
+
+
   <div class="container-fluid">
   	<div class="row">	
   		<div class="col-md-6 col-xs-6" id="feature-1">
   			<a href="#">
-  				<%= image_tag("force4.jpg", class:"img-responsive" ) %>
-  					<div class="feature-content">
-  						<h2>Luxuriously soft, versatile and always organic.</h2>
-  					</div>
-  					<div class=" For-Him">
-  						<div class="product-card>">
-  							<p class="gender"><span class="title">For Her</span></p>
-  							<p class="meta-info">Dark Collection</p>
-  						</div>
-  				</div>
+  				<%= image_tag("force4.jpg", class:"img-responsive her") %>
+            <p class="gender"><span class="title">FOR HER<br>Dark collection</span></p>
+  					<h2>Luxuriously soft, versatile and always organic.</h2>
   			</a>
-  		</div>
+  		</div><!--col -->
+
   		<div class="col-md-6 col-xs-6" id="feature-1">
   			<a href="#">
   				<%= image_tag("force6.jpg", class:"img-responsive" ) %>
-  					<div class="feature-content">
-  						<h2>Luxuriously soft, versatile and always organic.</h2>
-  					</div>
-  					<div class=" For-Him">
-  						<div class="product-card>">
-  							<p class="gender"><span class="title">For Him</span></p>
-  							<p class="meta-info">Dark Collection</p>
-  						</div>
-  					</div>
+            <p class="gender"><span class="title">FOR HIM<br>Dark collection</span></p>
+            <h1 class="call-to-action"><span>Shop here</span></h1>
+  					<h2>Luxuriously soft, versatile and always organic.</h2>		
   			</a>
   		</div>
   	</div>
@@ -48,21 +38,24 @@
   	</div>
   	<div class="container">
   		<div class="row">
-  			<div class="col-md-4 col-xs-6" id="feature-1">
+  			<div class="col-md-4 col-xs-6" id="good-1">
   				<a href="#">
-  					<h5> Workday</h5>
-  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
-  						<div class="product-text">
+  					<%= image_tag("shirt.jpg", class:"img-responsive" ) %>
+  						<div class="good-type">
   							<h3>Blouse</h2>
+                  <span>
+                    <button class="shop-button">
+                      <span class="shop">Shop</span>
+                    </button>
+                  </span>
   						</div>
   				</a>
   			</div>
 
-  			<div class="col-md-4 col-xs-6" id="feature-2">
+  			<div class="col-md-4 col-xs-6" id="good-2">
   				<a href="#">
-  					<h5> Afterwork</h5>
-  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
-  						<div class="product-text">
+  					<%= image_tag("shirt.jpg", class:"img-responsive" ) %>
+  						<div class="good-type">
   							<h3>Dress</h2>
   								<span>
   									<button class="shop-button">
@@ -73,12 +66,16 @@
   				</a>
   			</div>
   
-  			<div class="col-md-4 col-xs-6" id="feature-3">
+  			<div class="col-md-4 col-xs-6" id="good-3">
   				<a href="#">
-  					<h5>Weekend</h5>
-  					<%= image_tag("shirt.jpg", :size => "240x360" ) %>
-  						<div class="product-text">
+  					<%= image_tag("shirt.jpg", class:"img-responsive" ) %>
+  						<div class="good-type">
   							<h3>T-Shirt</h2>
+                  <span>
+                    <button class="shop-button">
+                      <span class="shop">Shop</span>
+                    </button>
+                  </span>
   						</div>
   				</a>
   			</div>
