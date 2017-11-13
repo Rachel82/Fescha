@@ -1,3 +1,5 @@
+<div class="form_new">
+
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
@@ -26,7 +28,18 @@
     <%= form.text_field :image_url, id: :product_image_url %>
   </div>
 
+  <div class="field">
+    <%= form.label :colour %><br>
+    <%= form.text_field :colour %>
+  </div>
+
+  <div class="field">
+    <% form.label :price %><br>
+    <% form.text_field :price %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
