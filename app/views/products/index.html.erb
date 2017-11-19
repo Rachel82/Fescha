@@ -1,14 +1,22 @@
 
 <body>
   <div class="container-fluid">
-    <h1>Pick you Choice!</h1>
+    <h1>Products!</h1>
     <p id="notice">HELLO<%= notice %></p>
   </div>
   <div class="container-fluid products">
     <div class="row_products">
-      <%= render @products %>
+      <% @products.each do |product| %>
+        <div class="col-sm-2 col-md-4">
+          <%= image_tag("shirt.jpg", class: "img-responsive") %>
+          <a href="#"><h1 class="product_name"><%= product.name %></h1></a>
+          <p class="product_description"><%= product.description %></p>
+          <p class="product_price"><%= product.price %></p>
+        </div><!-- /col -->
+      <% end %>
   </div>
 </div>
+  
     <!--
     <table class="table-center">
       <thead>

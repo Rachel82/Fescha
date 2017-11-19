@@ -1,10 +1,11 @@
 <div class="row_products">
       <% @products.each do |product| %>
         <div class="col-sm-2 col-md-4">
-          <%= image_tag("shirt.jpg", class: "img-responsive") %>
+          <%= link_to image_tag(product.image_url, class: "img-responsive") %>
           <a href="#"><h1 class="product_name"><%= product.name %></h1></a>
           <p class="product_description"><%= product.description %></p>
-          <p class="product_price"><%= product.price %></p>
+          <p class="product_price"><strong><%= product.price %></strong></p>
         </div><!-- /col -->
       <% end %>
   </div>
+
