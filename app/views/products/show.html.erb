@@ -1,48 +1,32 @@
-<body>
+<div class="notice-show">
+	<p id="notice"><%= notice %></p>
+</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-8">
 				<p> product image</p>
+				<%= image_tag(@product.image_url, class: "img-responsive") %>
 			</div>
+			
 			<div class="col-md-4">
-				<p>description</p>
-			</div>
-		</div>
-	</div>
+        <p class="name-show"><strong>Name:</strong>
+        <%= @product.name %>
+        </p>
 
+        <p class="description-show"><strong>Description:</strong>
+        <%= @product.description %>
+        </p>
 
+        <p class="color-show"><strong>Color:</strong>
+        <%= @product.color %>
+        </p>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@product.image_url) %>
-</p>
-
-<p>
-	<strong>Colour:</strong>
-	<%= @product.colour %>
-</p>
-
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
+        <p class="price-show"><strong>Price:</strong>
+        <%= @product.price %>
+        </p>       
+      </div>
+    </div>
+  </div>
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

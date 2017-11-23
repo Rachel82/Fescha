@@ -7,6 +7,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  		redirect_to "/static_pages/landing_page"
   end
 
   def landing_page
