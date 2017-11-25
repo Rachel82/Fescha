@@ -39,7 +39,7 @@
         <li>
           <div class="navbar-form search_bar">
             <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-              <%= form.label :q, 'Search for:' %>
+              <%= form.label :q, 'Search for:', class: 'search-label' %>
               <%= form.text_field :q, id: 'q', value: params[:q], class: 'search-field' %>
               <%= form.submit 'Search', class: 'search-submit' %>
             <% end %>

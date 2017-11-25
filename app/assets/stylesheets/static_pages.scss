@@ -26,7 +26,9 @@
 
 .navbar-nav li {
 	list-style: none;
+padding: 30px;
 }
+
 
 .navbar-nav ul {
   background-color: white;
@@ -45,6 +47,25 @@
 
 ul > li a:hover {
 	background-color: #CCD4BF;
+}
+
+.search-submit {
+	padding: 1px !important;
+}
+
+.search-label {
+	display: none;
+}
+.navbar-form {
+	margin-top: 0px;
+}
+
+.search-submit {
+	color: white;
+	background-color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
 }
 
 /**** g ****/
