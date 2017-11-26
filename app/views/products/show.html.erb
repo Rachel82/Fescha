@@ -8,7 +8,7 @@
 				<%= image_tag(@product.image_url, class: "img-responsive") %>
 			</div>
 			
-			<div class="col-md-4">
+		<div class="col-md-4">
         <p class="name-show"><strong>Name:</strong>
         <%= @product.name %>
         </p>
@@ -23,7 +23,10 @@
 
         <p class="price-show"><strong>Price:</strong>
         <%= @product.price %>
-        </p>       
+        </p> 
+        <p class="rating-show">Rating:
+        <br><%= @product.highest_rating_comment %>  
+        </p>    
       </div>
     </div>
   </div>
