@@ -53,5 +53,4 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
 
-#so any dynamic links that show up inside emails from your development environment generate the right URLs.
-config.action_mailer.default_url_option = { host: 'localhost:3000'}
+
