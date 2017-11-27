@@ -7,50 +7,59 @@
 	margin-top: 100px;
 }
 
-.navbar {
-	position: fixed;
-	display: inline-block;
+nav.navbar {
+	display: inline;
 	z-index: 100;
 	background-color: white;
 	width: 100%;
 }
 
-.navbar-nav {
-	float: right;
-	margin-top: 15px;
+.header {
+	position: relative;
+	display: inline-block;
+	background-color: black;
+	margin-top: -20px;
+	}
+
+a.navbar-brand{
+	font-size: 2em;
+	color: white
+}
+
+ul.navbar-nav  {
+  background-color: white;
+  padding-left: 0px; 
+  padding-top: 10px;
+}
+
+ul.nav.pull-right{
+	display: inline-block;
+	width: 33%;
+}
+
+.navbar-nav li {
+	list-style: none;
+}
+
+
+a:-webkit-any-link {
+	color: white !important;
 }
 
 .navbar a{
 	color: black !important;
 }
 
-.navbar-nav li {
-	list-style: none;
-padding: 30px;
-}
-
-
-.navbar-nav ul {
-  background-color: white;
-  transition: -0.9s;
-  width: 100%;
-}
-
 .navbar-nav > li > a {
 	text-transform: uppercase;
-	font-size: 0.875em;
 	color: black;
 	transition: 1s;
 	border-radius: 3px;
-	margin: 5px;
+	margin: 15px;
 }
 
-ul > li a:hover {
-	background-color: #CCD4BF;
-}
-
-.search-submit {
-	padding: 1px !important;
+.navbar-collapse.collapse {
+	padding-left: 0px;
 }
 
 .search-label {
@@ -60,13 +69,20 @@ ul > li a:hover {
 	margin-top: 0px;
 }
 
+li.login {
+float: right;
+}
+
 .search-submit {
+	padding: 1px !important;
 	color: white;
 	background-color: black;
 	border-width: 1px;
 	border-style: solid;
 	border-color: black;
 }
+
+
 
 /**** g ****/
 
@@ -98,7 +114,7 @@ h1 {
 .footer {
 	width: 100%;
 	height: 80px;
-	background-color: #262626;	
+	background-color: black;	
 }
 
 
@@ -230,16 +246,14 @@ a:-webkit-any-link {
 	margin-top: 200px;
 	margin-bottom: 100px;
 	width: 100%;
-	height: 500px;
-	
-}
-
-.carousel-inner>.itemactive>img {
-		width: 100%;
-   	padding: 10px 200px 10px 200px;    
+	height: 500px;	
 }
 
 .carousel-inner {
 	background-color: #000;
+	height: 500px;
 }
 
+.carousel-inner>.item>a>img {
+  width: 50%;
+}
