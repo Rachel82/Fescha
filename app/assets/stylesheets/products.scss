@@ -12,6 +12,8 @@
 	margin: 100px 200px 200px 200px;
 }
 
+
+
 .product-list {
 	padding: 10px 10px;
 }
@@ -43,4 +45,19 @@ h1.product_name {
 	margin-top: 20px;
 }
 
+h1.product_name a {
+	background-color: black;
+}
 
+p.product_description {
+	text-align: center;
+}
+
+p.product_price {
+	text-align: center;
+}
+
+p#notice {
+	text-align: center;
+	margin-bottom: 100px;
+}
