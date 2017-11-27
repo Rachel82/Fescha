@@ -7,12 +7,10 @@
 	top: 0px;
 	padding-right: 50px;
 }
-
+/**** Product List ****/
 .products {
 	margin: 100px 200px 200px 200px;
 }
-
-
 
 .product-list {
 	padding: 10px 10px;
@@ -32,13 +30,12 @@ width: 100%;
 .container-fluid h1 {
 	margin-top: 100px;
 }
-
+/**** PRoduct New ****/
 .form_new {
 	width: 100%;
 	margin-top:100px;
 	padding: 100px 450px 100px 450px;
 	height: 700px;
-	
 }
 
 h1.product_name {
@@ -61,3 +58,8 @@ p#notice {
 	text-align: center;
 	margin-bottom: 100px;
 }
+
+.back-edit-show {
+	background-color: black;
+}
+

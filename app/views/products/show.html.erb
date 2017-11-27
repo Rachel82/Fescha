@@ -4,12 +4,11 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8">
-			<p> product image</p>
+		<div class="col-md-6">
 				<%= image_tag(@product.image_url, class: "img-responsive") %>
 			</div>
 			
-		<div class="col-md-4">
+		<div class="col-md-6">
         <p class="name-show"><strong>Name:</strong>
         <%= @product.name %>
         </p>
@@ -29,11 +28,13 @@
          <p class="rating-show">Rating:
         <br><%= @product.highest_rating_comment %>  
         </p> 
-
+        <p class="back-edit-show">
+        <%= link_to 'Edit', edit_product_path(@product) %><span>
+        <%= link_to 'Back', products_path %></span>
+        </p>
       </div>
     </div>
   </div>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
