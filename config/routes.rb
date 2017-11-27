@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
-  resources :users
+  
 
   get 'static_pages/index'
 
