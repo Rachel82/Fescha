@@ -4,7 +4,40 @@
 
 
 h2.user-sign-up {
-	
 	margin-top: 170px;
 	text-align: center;
+}
+
+form#new_user.new_user {
+	padding: 50px 470px 100px 470px;
+}
+
+input.submit-signup {
+	background-color: white;
+	border-radius: 5px;
+	border: solid;
+	border-color: black;
+}
+
+input#user_password_confirmation,
+input#user_password,
+input#user_email {
+	border-radius: 3px;
+}
+
+h2.new-login {
+	text-align: center;
+	padding-right: 50px;
+	text-transform: uppercase;
+} 
+
+.submit-login {
+	background-color: white;
+	border-radius: 5px;
+	border: solid;
+	border-color: black;
+}
+
+p.submit-log {
+	padding-left: 50px;
 }
