@@ -1,10 +1,10 @@
 class UserMailer < ApplicationMailer
 	default from: "shop@fescha.at"
 
-	def contact_form(email, name, message)
-		@message = message
-			mail(from: email,
-				   to: 'akilimali82@hotmail.fr',
-				   subject: "A new contact form message from #{name}")
-		end
+		def contact_form(params)
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    mail(:to => 'akilimali82@hotmail.fr', :subject => "New Message!")
+  end
 end

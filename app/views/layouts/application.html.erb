@@ -20,7 +20,7 @@
     
     <div class="container">
       <div class="header"> 
-        <a class="navbar-brand" href="#">FESCHA!</a>
+  		  <a class="navbar-brand" href="#">FESCHA!</a>
       </div>
       <nav class="navbar"> 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -71,13 +71,15 @@
     <%= yield %>
     
     <footer class="container-fluid footer">
-      <div class="social-media">
-        <ul>  
-          <li><%= link_to(image_tag("Facebook.png",:size => "50x50"), "http://www.facebook.com") %></li>
-          <li><%= link_to(image_tag("Instagram.png", :size => "50x50"), "http://www.instagram.com") %></li>
-          <li><%=link_to(image_tag("Twitter.png", :size => "50x50"), "http://www.twitter.com") %></li>
-        </ul> 
-      <p class="copyright"> &copy; 2017 Fescha Austria</p>
+
+    	<div class="social-media">
+    		<ul>	
+    			<li><%= link_to(image_tag("Facebook.png",:size => "50x50"), "http://www.facebook.com") %></li>
+    			<li><%= link_to(image_tag("Instagram.png", :size => "50x50"), "http://www.instagram.com") %></li>
+    			<li><%=link_to(image_tag("Twitter.png", :size => "50x50"), "http://www.twitter.com") %></li>
+        </ul>	
+    	<p class="copyright"> &copy; 2017 Fescha Austria</p>
+
       </div>
     </footer>
   </div><!-- Container -->
