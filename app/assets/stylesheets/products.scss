@@ -7,7 +7,7 @@
 	top: 0px;
 	padding-right: 50px;
 }
-
+/**** Product List ****/
 .products {
 	margin: 100px 200px 200px 200px;
 }
@@ -30,22 +30,36 @@ width: 100%;
 .container-fluid h1 {
 	margin-top: 100px;
 }
-
+/**** PRoduct New ****/
 .form_new {
 	width: 100%;
 	margin-top:100px;
 	padding: 100px 450px 100px 450px;
 	height: 700px;
-	
-}
-
-.row_products .col-md-4 {
-	margin-bottom:	0px;
-	margin-top: 0px;
 }
 
 h1.product_name {
 	margin-top: 20px;
 }
 
+h1.product_name a {
+	background-color: black;
+}
+
+p.product_description {
+	text-align: center;
+}
+
+p.product_price {
+	text-align: center;
+}
+
+p#notice {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.back-edit-show {
+	background-color: black;
+}
 

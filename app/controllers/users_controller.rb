@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
   before_action :authenticate_user!, except: [:show, :index]
-  load_and_authorize_resource
+
 
   # GET /users
   # GET /users.json
@@ -75,3 +74,11 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name)
     end
 end
+
+def thank_you
+  @name = params[:name]
+  @email = params[:email]
+  @message = params[:message]
+  UserMailer.contact_form(@email, @name, @message).deliver_now
+end
+
