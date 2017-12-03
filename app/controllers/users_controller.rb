@@ -81,3 +81,4 @@ def thank_you
   @message = params[:message]
   UserMailer.contact_form(@email, @name, @message).deliver_now
 end
+
