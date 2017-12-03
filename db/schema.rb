@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171126152929) do
   end
 
 
+
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
