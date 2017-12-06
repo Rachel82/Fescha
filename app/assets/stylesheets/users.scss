@@ -2,8 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/**** APP Users****/
 
+.container-users {
+	height: 400px;
+}
 
+h1.users-title {
+	padding-top: 50px;
+}
+
+p#notice-new-user {
+	text-align: center;
+	color: black;
+	padding: 20px;
+	font-size: 30px;
+}
+
+.users-div {
+	margin: 0 200px 0 200px !important;
+}
+table.users-table {
+	background-color: black;
+	color: white;
+}
+
+.table-th {
+	padding: 0 100px 0 100px;
+	color: white;
+}
+
+tbody.users-td {
+	color: white !important;
+}
 h2.user-sign-up {
 	margin-top: 170px;
 	text-align: center;
