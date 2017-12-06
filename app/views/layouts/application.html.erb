@@ -68,13 +68,9 @@
     <% end %>
 
     <% if alert %>
-      <p id="alert" class="alert alert-info"><%= alert %></p>
-    <% end %> <!-- flash notice end-->
+      <p id="alert" class="alert alert-info"><%= alert %> Click <%= link_to 'HERE', static_pages_index_path %> To Be  Redirection Home</p>
 
-    <div class="alert alert-warning alert-dismissable" role="alert">
-    <%= alert %> 
-    <p>Click<a href="#" class="alert-link">Here</a> To Be  Redirection Home</p>
-  </div>
+    <% end %> <!-- flash notice end-->
 
     <%= yield %>
     
