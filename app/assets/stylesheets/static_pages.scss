@@ -17,13 +17,12 @@ nav.navbar {
 .header {
 	position: relative;
 	display: inline-block;
-	background-color: black;
 	margin-top: -20px;
 	}
 
 a.navbar-brand{
 	font-size: 2em;
-	color: white
+	color: white !important;
 }
 
 ul.navbar-nav  {
@@ -46,7 +45,7 @@ ul.nav.pull-right{
 }
 
 a:-webkit-any-link {
-	color: white !important;
+	color: black !important;
 }
 
 .navbar a{
