@@ -7,4 +7,11 @@ class UserMailer < ApplicationMailer
     @message = params[:message]
     mail(:to => 'akilimali82@hotmail.fr', :subject => "New Message!")
   end
+
+  def welcome(user)
+  @appname = "Bike Shop"
+  mail(to: user.email,
+       subject: "Welcome to #{@appname}!")
+	end
+	
 end
