@@ -20,7 +20,7 @@ require 'rails_helper'
       			get :index
       			expect(response).to be_ok
       			expect(response).to render_template('index')
-      		#expect(assigned(:product).to expect(assigns(:product)).to be_a_new(Product)
+      		#expect(assigned(:product).to expect(assigns(:product)).to be_a_new(Product)/ or flash code.
     			end
   			end
   		end
@@ -33,10 +33,31 @@ require 'rails_helper'
 					end
 				end
 			end
-
-			describe 'Get #edit' do
-				context 'when user logged in edits' do
-					it 'renders '
 		end
+
+			#describe 'Get #edit' do
+			#	context 'when user logged in ' do
+			#		before do 
+			#			sign_in user
+			#		end
+			#		it 'restrict access to edit ' do
+			#			get :edit, params: {id: product}
+			#			expect(response).not_to be_ok
+			#			expect(response).to redirect_to(root_path)
+			#			expect(flash[:alert]).to eq "You are not authorized to access this page."
+			#		end
+			#	end
+			#end
+		#end
+
+				#context 'when user not logged in' do
+					#it "Restricts access to edit page" do
+						#get :edit, params: {id: product}
+						#expect(response).not_to be_ok
+						#expect(response).to redirect_to(root_path)
+						#expect(flash[:alert]).to eq "You are not authorized to access this page."
+					#end
+				#end
+		#end
 
 
