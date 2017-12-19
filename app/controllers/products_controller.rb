@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-      @products =Product.paginate(:page => params[:page], :per_page =>3)
   end
 
   # GET /products/1
