@@ -3,9 +3,11 @@ class Product < ApplicationRecord
 	has_many :comments
 	validates :name, presence: true
 	
-	def self.search(search_term)
-  Product.where("name LIKE ?", "%#{search_term}%")
-	end
+	def Product.search(search_term)
+    like_string = Rails.env.production? ? "ilike" : "LIKE"
+    Product.where("name #{like_string} ?", "%#{search_term}%")
+  end
+
 
 	def highest_rating_comment
 		comments.rating_desc.first
