@@ -9,9 +9,9 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome(user)
-  @appname = "Bike Shop"
+  @appname = "Fescha"
   mail(to: user.email,
-       subject: "Welcome to #{@appname}!")
+       subject: "Welcome to #{@Fescha}!")
 	end
 	
 end
