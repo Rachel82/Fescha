@@ -1,7 +1,8 @@
 require 'rails_helper'
 	describe ProductsController, type: :controller do #creates new
 		let (:product) {Product.create!(name: 'Lola', description: 'Hellogfdbgddhfdghdhdfgdf', price:'50 Eur')}
-		let (:user) {User.create!(first_name: 'Lola', last_name: 'Hello', email: 'lola@yahoo.fr', password: 'hiya23456')}
+		let (:user) {User.create!(first_name: 'Hava', last_name: 'Hello', email: 'lola@yahoo.fr', password: 'hiya23456')}
+		#@user = User.create!(first_name: 'Sheva', last_name: 'Bella', email: 'loya@yahoo.fr', password: 'hiya23456')
 
 		describe 'GET #new:' do
 			context 'when user is logged in' do
@@ -33,31 +34,49 @@ require 'rails_helper'
 					end
 				end
 			end
-		end
+			describe 'Get #edit' do
+				context 'when user is logged in ' do
+					before do 
+						sign_in user
+					end
+					it 'access to edit ' do
+						get :edit, params: {id: product}
+						expect(response).to be_ok
+						#expect(flash[:notice]).to eq 'Product was successfully updated.'
+						expect(response).to render_template('products/edit')
+					end
+				end
+			end
+				context 'when user is logged in ' do
+					before do 
+						sign_out user
+					end
+					it 'cannot access #edit ' do
+						get :edit, params: {id: product}
+						expect(response).not_to be_ok
+						expect(response).to redirect_to('/users/sign_in')
+					end
+				end
+			end
 
-			#describe 'Get #edit' do
-			#	context 'when user logged in ' do
-			#		before do 
-			#			sign_in user
-			#		end
-			#		it 'restrict access to edit ' do
-			#			get :edit, params: {id: product}
-			#			expect(response).not_to be_ok
-			#			expect(response).to redirect_to(root_path)
-			#			expect(flash[:alert]).to eq "You are not authorized to access this page."
-			#		end
-			#	end
-			#end
-		#end
+			describe 'Put #update' do
+				context 'when user is logged in ' do
+						let (:user) {User.create!(first_name: 'Hava', last_name: 'Hello', email: 'lola@yahoo.fr', password: 'hiya23456')}
+						let (:product) {Product.create!(name: 'Lola', description: 'Hellogfdbgddhfdghdhdfgdf', price:'50 Eur')}
 
-				#context 'when user not logged in' do
-					#it "Restricts access to edit page" do
-						#get :edit, params: {id: product}
-						#expect(response).not_to be_ok
-						#expect(response).to redirect_to(root_path)
-						#expect(flash[:alert]).to eq "You are not authorized to access this page."
-					#end
-				#end
-		#end
+					before do 
+						sign_in user
+					end
+
+					it 'access to edit ' do
+						put :update, params: {id: product, product: {name: 'T'}}
+						expect(response).to be_ok
+						expect(product.name).to eq 'T'
+						#expect(flash[:notice]).to eq 'Product was successfully updated.'
+						expect(response).to render_template('products/edit')
+					end
+				end
+			end
+			
 
 
