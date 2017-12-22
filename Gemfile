@@ -49,6 +49,7 @@ end
 
 group :developement, :test do
   gem 'rspec-rails', '~> 3.6'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :production do
@@ -65,3 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'cancancan', '~>1.10'
 gem 'rails-controller-testing'
+
+
