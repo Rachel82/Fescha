@@ -1,56 +1,53 @@
 <div class="notice-show">
-	<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 </div>
 
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-6">
-				<%= image_tag(@product.image_url, class: "img-responsive") %>
-		</div>
-			
-		<div class="col-md-6 ">
+    <div class="row">
+        <div class="col-md-6">
+        <%= image_tag(@product.image_url, class: "img-responsive") %>
+        </div>
+        <div class="col-md-6 ">
             <p class="name-show"><strong>Name:</strong>
                 <%= @product.name %>
             </p>
-
             <p class="description-show"><strong>Description:</strong>
                 <%= @product.description %>
             </p>
-
             <p class="color-show"><strong>Colour:</strong>
                 <%= @product.colour %>
             </p>
-
             <p class="price-show"><strong>Price:</strong>
                 <%= @product.price %>
             </p> 
-        <!--
-         <p class="rating-show">Rating:
-        <br><%= @product.highest_rating_comment %>  
-        </p> 
-        -->
-
-            <p>Customers' Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+            <p>Customers' Average Rating: 
+                <div class="rated" data-score="<%= @product.average_rating %>"></div>          
+            <p><%= form_with(url: '/payments/create') do |form| %>
+                <%= render partial: "shared/stripe_checkout_button" %>
+                <% end %>
+            </p>
                 <%= render 'new_comment' %>
             <p class="back-edit-show">
-                <%= link_to 'Edit', edit_product_path(@product) %><span>
-                    
+            <%= link_to 'Edit', edit_product_path(@product) %><span>
                 <% if current_user && current_user.admin? %>
-                    <%= link_to "Delete", @product, method: :delete, class:'btn btn-danger', data: {confirm: 'Are you sure?'}%> 
-                <% end %>  
-                <%= link_to 'Back', products_path %></span></p>
+                <%= link_to "Delete", @product, method: :delete, class:'btn btn-danger', data: {confirm: 'Are you sure?'}%> 
+            <% end %>  
+            <%= link_to 'Back', products_path %></span>
+            </p>
         </div>
 
     <div class="row reviews">
         <div class="col-md-12">  
             <p class="customer-reviews">Customer Reviews</p>
-                <%= render 'comments'   %>
+            <%= render 'comments'   %>
         </div>
-    </div class="digg_pagination">
-        <div class="page_info">
+        <div class="digg_pagination">
+            <div class="page_info">
             <%= page_entries_info @comments %>
+            </div>
+            <%= will_paginate @comments, :container => false %>
         </div>
-        <%= will_paginate @comments, :container => false %>
+    </div>
 </div>
 
 
