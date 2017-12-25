@@ -18,7 +18,7 @@
                 <%= @product.colour %>
             </p>
             <p class="price-show"><strong>Price:</strong>
-                <%= @product.price %>
+                <%= @product.price/100.0 %>
             </p> 
             <p>Customers' Average Rating: 
                 <div class="rated" data-score="<%= @product.average_rating %>"></div>          
