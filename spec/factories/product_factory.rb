@@ -1,5 +1,5 @@
 FactoryBot.define do
-	sequence(:price) { |n| "#{n + 50}" }
+	sequence(:price_in_cents) { |n| "#{n + 50}" }
   
   factory :product do
     name "anything"
