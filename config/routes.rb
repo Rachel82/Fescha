@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "user_registrations"}
   resources :users
+  resources :payments
   resources :products do
     resources :comments
   end
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   post 'static_pages/thank_you'
+  
+  post 'payments/create'
+  get  'payments/create'
 
   root 'static_pages#landing_page'
 
