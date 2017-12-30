@@ -8,14 +8,14 @@ class PaymentsController < ApplicationController
   # Create the charge on Stripe's servers - this will charge the user's card
   begin
     charge = Stripe::Charge.create(
-      amount: (@product.price_in_cents/100), # amount in cents, again
+      amount: (@product.price_in_cents), # amount in cents, again
       currency: 'eur',
       source: token,
       description: params[:stripeEmail]
     )
     if charge.paid
     	Order.create(product_id: @product.id, user_id: @user.id,
-      total: @product.price)
+      total: @product.price_in_cents)
   	end
 
   rescue Stripe::CardError => e
@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
     err = body[:error]
     flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
   end
-  redirect_to product_path(product)
+  redirect_to product_path(@product)
 end
 
 def index
