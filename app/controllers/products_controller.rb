@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
       @products = Product.search(search_term)
     else
       @products = Product.all
+      byebug
+      #logger.debug "Product: #{@products}"
     end
   end
 
@@ -17,6 +19,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page =>5)
+    # logger.debug "Comments: #{@comments}"
   end
 
   # GET /products/new
