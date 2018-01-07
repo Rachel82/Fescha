@@ -13,5 +13,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
+//= require jquery.elevateZoom-3.0.8.min
 //= require_tree .
 
