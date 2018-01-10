@@ -58,6 +58,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.2)
+    dalli (2.7.6)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -96,6 +97,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    memcachier (0.0.2)
     method_source (0.9.0)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
@@ -220,12 +222,14 @@ DEPENDENCIES
   cancancan (~> 1.10)
   chosen-rails
   coffee-rails (~> 4.2)
+  dalli
   devise
   elevatezoom-rails
   factory_bot_rails (~> 4.0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  memcachier
   pg
   puma (~> 3.7)
   rails (~> 5.1.4)

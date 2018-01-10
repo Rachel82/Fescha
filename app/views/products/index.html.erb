@@ -5,7 +5,9 @@
       <p id="notice">HELLO<%= notice %></p>
     <div class="row_products">
       <% @products.each do |product| %>
+        <% cache(cache_key_for_products) do %>
         <%= render product %>
+       <% end %> 
       <% end %>
     </div><!-- Row -->
 
