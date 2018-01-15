@@ -5,6 +5,6 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://localhost:6379/1
+  adapter: postgresql
+  url: postgres://xmbcsdwfavpxxm:a71f9111b6c096dbe3f9dad6c739aef32441907d2c51185cd6960927117b5438@ec2-50-16-204-127.compute-1.amazonaws.com:5432/ddtomc9e5n2o87
   channel_prefix: Fescha_production
