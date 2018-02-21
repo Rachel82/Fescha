@@ -7,6 +7,8 @@
 	top: 0px;
 	padding-right: 50px;
 }
+
+
 /**** Product List ****/
 .products {
 	margin: 100px 200px 200px 200px;
@@ -30,6 +32,8 @@ width: 100%;
 .container-fluid h1 {
 	margin-top: 100px;
 }
+
+
 /**** Product New ****/
 .form_new {
 	width: 100%;
@@ -47,12 +51,22 @@ h1.product_name a {
 	text-transform: uppercase;
 }
 
-p.product_description {
-	text-align: center;
+h4.description-show {
+	font-family: "Yantramanav","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-align: left !important;
+	font-size: 13px;
+	line-height: 18px;
 }
 
-p.product_price {
-	text-align: center;
+.pay-button {
+	position: absolute;
+	display: inline;
+}
+
+h4.rated-caption {
+	position: relative;
+	font-size: 13px;
+	margin-top: 80px;
 }
 
 p#notice {
@@ -61,7 +75,7 @@ p#notice {
 }
 
 .back-edit-show {
-	background-color: grey;
+	background-color: black;
 	padding: 5px;
 	margin-top: 17px;
 }
@@ -79,6 +93,34 @@ a.new-prod-link {
 	margin-left: 50px;
 	paddin-bottom: 100px;
 }
+
+h1.name-show {
+font-family: "Yantramanav","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 24px;
+	letter-spacing: 0.03127em;
+	text-transform: uppercase;
+	color: #4A4A4A;
+	line-height: 1;
+	margin-top: 0px;
+	text-align: left;
+}
+
+h2.color-show {
+	font-family: "Yantramanav","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0.03127;
+	text-transform: uppercase;
+	color: #4A4A4A;
+	margin-top: 0px;
+}
+
+h3.price-show {
+	color: #9b9b9b;
+}
+
+
+
 /**** Comments Reviews ****/
 
 .customer-reviews {
@@ -89,12 +131,19 @@ a.new-prod-link {
 
 .rated {
 	width: 600px;
-	position: relative;
-	padding: 0 200px 0 220px;
 }
 
-.rated img {
+.new-comment {
+	text-align: center;
+}
 
+.reviews-comment-body {
+	margin: 0px;
+}
+
+#comment_body.text-area {
+	width: 100%;
+	height: 200px;
 }
 
 .rating {
@@ -111,10 +160,14 @@ form#new_comment.new_comment {
   border: 1px solid #e5e5e5;
   text-align: center;
   cursor: default; 
+  background-color: black;
+  color: white;
 	}
-	
+a.next_page {
+	color: white !important;
+}	
 .digg_pagination a{
-	backgound-color: black;
+	backgound-color: white;
 }
 	.digg_pagination a, .digg_pagination span {
     padding: 0.2em 0.3em; }

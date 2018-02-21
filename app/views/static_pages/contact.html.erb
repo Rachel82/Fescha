@@ -3,11 +3,10 @@
 	<h1>Fescha Austria</h1>
 		<p>Neunkirchnerstasse 44C, 4<br> 2700 Wiener Neustadt<br>Austria</p>
 </div>
+<div class="row-contact">
+  <%= flash[:notice] %>
+  <%= form_with(url:"/static_pages/thank_you", method: "post", local: true) do |form| %>
 
-<%= flash[:notice] %>
-
-<%= form_with(url:"/static_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control", required: true, placeholder: "Enter Name" %>

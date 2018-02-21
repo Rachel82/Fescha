@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
 	has_many	:orders
-	has_many :comments
+	has_many 	:comments
 	validates :name, presence: true
 	
 	def Product.search(search_term)

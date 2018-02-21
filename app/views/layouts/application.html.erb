@@ -17,63 +17,50 @@
 
 
   <body>
-    <!-- Navigation Start -->
-    <div class="container-fluid">
-      <div class="header"> 
-        <a class="navbar-brand" href="#">FESCHA!</a>
+    <main class="general-content">
+      <div class="container">
+        <div class="header">
+          <p class="navbar-brand">FESCHA!</p>
+        </div><!-- header -->
+
+        <nav class="navbar">   
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active"><%= link_to 'Home', static_pages_index_path, class:'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'About', static_pages_about_path, class:'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Products', products_path, class:'nav-link' %></li>
+              <li class="nav-item"><%= link_to 'Contact', static_pages_contact_path, class:'nav-link disabled' %></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li class="navbar-form search_bar">
+                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                      <%= form.label :q, 'Search for:', class: 'search-label' %>
+                      <%= form.text_field :q, id: 'q', value: params[:q], class: 'search-field' %>
+                      <%= form.submit 'Search', class: 'search-submit' %>
+                <% end %>
+              </li><!-- Search bar end -->
+              <li class="loginlink">
+                <%if user_signed_in? %>
+                 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
+            </ul><!-- pull right --> 
+          </div><!-- collapse end-->  
+        </nav><!-- nav end -->
       </div>
-      <nav class="navbar"> 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <%= link_to 'Home', static_pages_index_path, class:'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'About', static_pages_about_path, class:'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Products', products_path, class:'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Contact', static_pages_contact_path, class:'nav-link disabled' %>
-            </li>
-          </ul>
-
-          <!-- Search bar start -->
-          <div class="navbar-form search_bar">
-            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-              <%= form.label :q, 'Search for:', class: 'search-label' %>
-              <%= form.text_field :q, id: 'q', value: params[:q], class: 'search-field' %>
-              <%= form.submit 'Search', class: 'search-submit' %>
-            <% end %>
-          </div><!-- Search bar end -->
-        </li>
-    	</ul>
-      <!-- Login/out Start -->
-      <ul class="nav pull-right">
-        <li>
-        <%if user_signed_in? %>
-           <p>Welcome, <%= @name %>  <%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
-        <% else %>
-          <%= link_to('Login', new_user_session_path) %>
+      <!-- Flash notice Start -->
+      <div class="container-fluid notice-alerts">
+        <% if notice %>
+          <p id="notice" class="alert alert-info"><%= notice %></p>
         <% end %>
-        </li>
-      </ul><!-- Login/out end -->
-  	</div>
-    </nav>
-
-    <!-- Flash notice Start -->
-    <% if notice %>
-      <p id="notice" class="alert alert-info"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-      <p id="alert" class="alert alert-info"><%= alert %></p>
-
-    <% end %> <!-- flash notice end-->
-
+        <% if alert %>
+          <p id="alert" class="alert alert-info"><%= alert %></p>
+        <% end %> <!-- flash notice end-->
+      </div>
     <%= yield %>
-    
+    </main>
     <!-- Footer Start -->
     <footer class="footer">
       <div class="social-media">
@@ -82,14 +69,12 @@
           <li><%= link_to(image_tag("Instagram.png", :size => "50x50"), "http://www.instagram.com") %></li>
           <li><%=link_to(image_tag("Twitter.png", :size => "50x50"), "http://www.twitter.com") %></li>
         </ul> 
-      <p class="copyright"> &copy; 2017 Fescha Austria</p>
+        <p class="copyright"> &copy; 2017 Fescha Austria</p>
       </div>
-    </footer>
-  </div><!-- Footer End -->
+    </footer><!-- Footer End -->
 
-     <!--============================== -->
+    <!-- ============================= -->
     <!--      JavaScript -->
     <!-- ============================= -->
   </body>
-
 </html>
